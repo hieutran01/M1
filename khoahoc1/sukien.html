@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- thông qua sự kiện -->
+    <button onclick="alert('tao xí nè')">click1</button>
+<!-- thông qua khối lệnh -->
+    <button onclick="xu_ly()">click2</button>
+    <!-- thông qua javascript -->
+    <button id="btn">click3</button>
+
+    <script>
+        /*
+        document.getElementById('ID_PHAN_TU').addEventListener('TEN_SU_KIEN',function(){
+            //code
+        });
+        */
+
+        // tìm phần tử có id là btn
+        document.getElementById('btn').addEventListener('click',function(){
+            //code
+            alert('hihhhdfsfdhfsdf')
+
+        });
+        // khai báo khối lệnh
+        function xu_ly() {
+            // mã xử lý
+            alert('segd')
+        }
+    </script>
+   
+</body>
+</html>

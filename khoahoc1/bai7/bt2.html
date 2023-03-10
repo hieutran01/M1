@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text" id="tien"></td>
+            <td>
+                <select id="nuoc1">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="nuoc2">
+                    <option value="VND">VND</option>
+                    <option  value="USD">USD</option>
+                </select>
+            </td>
+            <td><button onclick="ChangeMoney()">Convert</button></td>
+        </tr>            
+    </table>
+    <p id="ketqua"></p>
+    <script>
+        function ChangeMoney() {
+    let tien = document.getElementById("tien").value;
+    let nuoc1 = document.getElementById("nuoc1").value;
+    let nuoc2 = document.getElementById("nuoc2").value;
+    let ketqua;
+
+
+    if (nuoc1 == "USD" && nuoc2 == "VND") {
+        ketqua = "ketqua: " + (tien * 23000) + " Đ";
+    }
+    else if (nuoc1 == "VND"&& nuoc2 =="USD"){
+        ketqua = "ketqua: "+ (tien / 23000) + " $";
+    }
+    else if (nuoc1 == "VND") {
+        ketqua = "ketqua: " + tien + " Đ"
+    } else {
+        ketqua = "ketqua: " + tien + " $"
+    }
+        
+    document.getElementById("ketqua").innerHTML = ketqua;
+}
+    </script>
+</body>
+</html>
