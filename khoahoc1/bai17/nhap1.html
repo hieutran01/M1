@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <canvas id="myCanvas" width="300" height="100"></canvas> -->
+
+    <script>
+//   function findAvg(arr) {
+//             sum = 0;
+//             avg = 0
+//             for (var i = 0; i < arr.length; i++) {
+//                 sum += arr[i]
+//                 avg = sum / arr.length
+//             }
+//             return sum
+//         }
+//         var arr = [6, 7, 8, 9];
+//         console.log(findAvg(arr));
+//         console.log(avg);
+
+// function findAvg(arr){
+//     sum = 0
+//     avg = 0
+//     for(var i = 0;i<arr.length;i++){
+//         sum += arr[i]
+//         avg = sum/arr.length
+//     }
+//     return sum 
+// }
+// var arr  = [1,2,3,4,5]
+// console.log(findAvg(arr));
+// console.log(avg);
+       
+
+
+          var x = Number(prompt("Nhập X"));
+        var index = Number(prompt("Nhập Index"));
+        var mang = [7, 5, 3, 7];
+        function insertNumberToArray(Mang, X, Index) {
+            for (var i = 0; i < Mang.length; i++) {
+                if (Index < 0 || Index > Mang.length) {
+                    document.write("Mảng = [" + Mang + "]");
+                    return Mang;
+                } else {
+                    Mang[Index] = X;
+                    document.write("Mảng = [" + Mang + "]");
+                    return Mang;
+                }
+            }
+        }
+        insertNumberToArray(mang, x, index);
+
+
+        var x = prompt("Nhập số để kiểm tra");
+        function sumOfListPrime(x) {
+            sum = 0;
+            for (var i = 0; i <= x; i++) {
+                sum += i
+            }
+            return sum;
+        }
+    
+        console.log(sumOfListPrime(x));
+
+
+        class Rectangle {
+            constructor(x, y, chieu_dai, chieu_rong, color) {
+                this.x = x;
+                this.y = y;
+                this.width = chieu_dai;
+                this.height = chieu_rong;
+                this.color = color;
+            }
+
+            render() {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+
+            }
+        }
+        var hinhchunhat = new Rectangle(10, 10, 400, 200, '#FF0000')
+        hinhchunhat.render();
+
+        
+         
+
+    </script>
+</body>
+</html>

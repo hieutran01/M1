@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" placeholder="nhap mon ly" name="" id="ip_ly"> <br>
+        <input type="text" placeholder="nhap mon hoa" name="" id="ip_hoa"> <br>
+        <input type="text" placeholder="nhap mon sinh" name="" id="ip_sinh"> <br>
+        <input type="button" value="tinh" onclick="xu_ly()">
+
+    </form>
+    <script>
+        function xu_ly() {
+            // lấy đầu vào và lưu trữ
+            var ly = document.getElementById("ip_ly").value;
+            var hoa = document.getElementById("ip_hoa").value;
+            var sinh = document.getElementById("ip_sinh").value;
+            ly = parseInt(ly)
+            hoa = parseInt(hoa)
+            sinh = parseInt(sinh)
+
+            // xử  lý
+            var dtb = (ly + hoa + sinh) / 3;
+            // xuất ra
+            alert (dtb) 
+
+
+
+
+        }
+    </script>
+   
+</body>
+
+</html>

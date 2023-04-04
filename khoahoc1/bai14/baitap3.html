@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // bài 1
+        // function alertMessage() {
+        //     alert("Xin Chao")
+        // }
+        // alertMessage();
+
+        // bai2
+            // function number(a) {
+            //     a = a + 1;
+            //     return a;
+            // }
+
+
+
+            // console.log(number(7));
+            
+            // let b = number(8);
+            // console.log(b);
+
+        //bai3
+        // let a = 8;
+        //     let b = 7;
+        //     function number(a,b) {
+        //         if(a > b) {
+        //             return a + ' lớn hơn ' + b;
+        //         } else if(a <= b) {
+        //             return a + b;
+        //         }
+        //     }
+        //         console.log(number(a, b));
+
+        //bai4
+        // function addNumbers() {
+        //     firstNum = 4;
+        //     secondNum = 8;
+        //     result = firstNum + secondNum;
+        //     return result;
+        // }
+        // result = 0;
+        // alert(result);
+        // result = addNumbers();
+        // alert(result)
+
+        //bai5
+        // let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        // let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+        // function check_star(star) {
+        //     let index_star1 = 0;
+        //     let result = "";
+        //     for (let i = 0; i < star1.length; i++) {
+        //         if (star == star1[i]) {
+        //             index_star1 = i;
+        //             for (let j = 0; j < star2.length; j++) {
+        //                 if (index_star1 == j) {
+        //                     result = star2[j];
+        //                     return result;
+        //                 } else {
+        //                     result = "Không tìm thấy chòm sao"
+        //                     return result;
+        //                 }
+        //             }
+        //         } else {
+        //             result = "Không tìm thấy sao";
+        //             return result;
+        //         }
+        //     }
+
+        // }
+        // let star = prompt("Nhập vào ngôi sao: ")
+        // document.write(check_star(star));
+
+        // let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        // let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        // function check_star(star) {
+        //     for (let i = 0; i < star1.length; i++) {
+        //       if (star == star1[i]) {
+        //         return star2[i]
+        //       }
+        //     }
+        // }
+        // let star = prompt("Nhập vào ngôi sao: ")
+        // document.write(check_star(star));
+        
+
+   // bai6
+//    let number =prompt("Nhap so vao");
+//     function tinh_binh_phuong(so) {
+//         let ket_qua = so * so;
+//    alert(ket_qua);
+//     }
+//        tinh_binh_phuong(number);
+
+//bai7
+// let number = parseInt(prompt("Nhap so vao"));//5
+//         tinh_dien_tich(number);
+
+//         function tinh_dien_tich(r) {
+//             let ket_qua = r * r * 3.14;
+//             console.log(ket_qua);
+//         }
+//         tinh_dien_tich(r);
+
+//         let number1 = parseInt(prompt("Nhap so vao"));//5
+//         tinh_chu_vi(number1);
+
+//         function tinh_chu_vi(r) {
+//             let ket_qua =  r * 2 * 3.14;
+//             console.log(ket_qua);
+//         }
+
+        //   function tinh_dien_tich(r) {
+        //     let ket_qua = r * r * 3.14;
+        //     console.log(ket_qua);
+        // }
+        // tinh_dien_tich(5);
+
+        //bai8
+    //     let number1 = parseInt(prompt("Nhap so vao"));
+    // function tinh_giai_thua(n) {
+    //   let tich = 1;
+    //   for (let i = 1; i <= n; i++) {
+    //     tich = tich * i;
+    //   }
+    //   console.log(tich);
+    // }
+    // tinh_giai_thua(number1);
+
+    //bai9
+    //   let number1 = prompt("Nhap so vao");//'6'
+    //   function kiem_tra_so(ky_tu) {
+    //         if(typeof ky_tu == "number") {
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
+    //     }
+    //     console.log(kiem_tra_so(8));
+
+    //bai10
+    // function tim_so_nho_nhat(a,b,c) {
+    //         let min;
+    //         if(a < b && a < c) {
+    //             min = a;
+    //         } else if(b < a && b < c) {
+    //             min = b;
+    //         } else {
+    //             min = c;
+    //         }
+    //         return min;
+    //     }
+    //     let ket_qua = tim_so_nho_nhat(9,2,6);
+    //     console.log(ket_qua);
+
+    //bai11
+    // function kiem_tra_so_nguyen_duong(n) {
+    //         if(n >= 0) {
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
+    //     }
+    //     let ket_qua = kiem_tra_so_nguyen_duong(-4)
+    //     console.log(ket_qua);
+
+    //bai12
+    // function doi_cho_2_so(a,b) {
+    //         let c;
+    //         c = a;
+    //         a = b;
+    //         b = c;
+    //         console.log(a, b);
+    //     }
+    //        doi_cho_2_so(1,2);
+
+    //bai13
+    // function dao_nguoc_mang(arr) {
+    //         let new_arr = [];
+    //         for(i = 0; i < arr.length; i++) {
+    //             new_arr.unshift(arr[i]);
+    //         }
+    //         console.log(new_arr);
+    //     }
+    //     dao_nguoc_mang([1,2,3,4,5])
+
+    // bai14
+    function dem_so_lan(arr, ky_tu) {
+            let dem = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == ky_tu) {
+                    dem = dem + 1;
+                }
+
+            }
+            if (dem == 0) {
+                return -1;
+            } else {
+                return dem;
+            }
+        }
+        let ket_qua = dem_so_lan([1,2,5,5,5,6], 5)
+        console.log(ket_qua);
+
+    //bai15
+    
+    // </script>
+
+    </script>
+</body>
+
+</html>

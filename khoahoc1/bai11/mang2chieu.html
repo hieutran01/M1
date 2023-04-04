@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var numbers = [
+        //     [5, 12, 17, 9, 3],
+        //     [13, 4, 8, 14, 1],
+        //     [9, 6, 3, 7, 21]
+        // ];
+        // alert(numbers[1][2]); // In ra 8    //array[row][column] lấy phần tử trong mãng 2 chiều 
+
+        //   thêm pt vào cuối mãng 2 chiều
+        // var numbers = [];
+        // numbers.push([5, 12, 17, 9, 3]);
+        // numbers.push([13, 4, 8, 14, 1]);
+        // numbers.push([9, 6, 3, 7, 21]);
+        // console.log(numbers);
+
+        // thêm pt vào đầu mãng
+        // var numbers = [];
+        // numbers.unshift([5, 12, 17, 9, 3]);
+        // numbers.unshift([13, 4, 8, 14, 1]);
+        // numbers.unshift([9, 6, 3, 7, 21]);
+        // console.log(numbers);
+
+        // duyệt mãng 2 chiều
+        // var numbers = [
+        //     [5, 12, 17, 9, 3],
+        //     [13, 4, 8, 14, 1],
+        //     [9, 6, 3, 7, 21]
+        // ];
+
+        // // Lặp theo hàng
+        // for (var i = 0; i < numbers.lenght; i++) {
+
+        //     // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng i
+        //     for (var j = 0; j < numbers[i].length; j++) {
+        //         console.log(numbers[i][j]);
+        //     }
+        // }
+
+        //tạo bảng random nn 20pt
+        var numbers = [];
+
+        // Lặp theo hàng
+        for (var i = 0; i < 4; i++) {
+            numbers[i] = [];
+            // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng i
+            for (var j = 0; j < 5; j++) {
+                numbers[i][j] = Math.floor((Math.random() * 10) + 1);
+            }
+        }
+
+        console.log(numbers);
+
+    </script>
+</body>
+
+</html>

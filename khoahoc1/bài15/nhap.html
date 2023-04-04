@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var hieu = {
+            chieucao: "155c,",
+            cannang: 42,
+            ten: "hieu",
+            tuoi: 23,
+            hinhdang: "om",
+            sothich: "nghe nhac", 
+            chayxe: function(){
+                return this.ten + " chayxe"
+            },
+            dibo: function(){
+                return this.ten + " dibo"
+            },
+            dihoc: function(){
+                return this.ten + " dihoc"
+            },
+            get: function(){
+                return this.ten + " chayxe " + this.ten + " dibo " + this.ten + " dihoc "
+            }
+            
+
+        }
+        console.log(hieu);
+        console.log(hieu.get());
+
+        // console.log(hieu.chayxe());
+        // console.log(hieu.dibo());
+        // console.log(hieu.dihoc());
+        
+    </script>
+</body>
+</html>

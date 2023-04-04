@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var stbd = 12000000;
+        var st = 12
+        var lai = 10
+
+
+
+        for (let i = 1; i <= st; i++) {
+            if(i>1){
+                stbd = stbd - 1000000
+            }
+            var goc = stbd / st;
+            var lai = (stbd * 10) / 100;
+            var ht = goc + lai;
+
+            console.log('stbd',stbd);
+            console.log('goc',goc);
+            console.log('lai',lai);
+            console.log('ht',ht);
+            console.log("-----------------");
+        }
+    </script>
+</body>
+
+</html>

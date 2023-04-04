@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nhap" value=""><br><br>
+    <button onclick="xuly(1)" id="1" value="1">1</button>
+    <button onclick="xuly(2)" id="2" value="2">2</button>
+    <button onclick="xuly(3)" id="3" value="3">3</button>
+    <button onclick="xuly('+')" id="3" value="3">+</button>
+    <br><br>
+    <button onclick="xuly(4)" id="4" value="4">4</button>
+    <button onclick="xuly(5)" id="5" value="5">5</button>
+    <button onclick="xuly(6)" id="6" value="6">6</button>
+    <button onclick="xuly('-')" id="3" value="3">-</button>
+    <br><br>
+    <button onclick="xuly(7)" id="7" value="7">7</button>
+    <button onclick="xuly(8)" id="8" value="8">8</button>
+    <button onclick="xuly(9)" id="9" value="9">9</button>
+    <button onclick="xuly('*')" id="3" value="3">x</button>
+    <br><br>
+    <button onclick="xoa()">AC</button>
+    <button onclick="xuly(0)" id="0" value="0">0</button>
+    <button onclick="kq()">=</button>
+    <button onclick="xuly('/')" id="3" value="'/">/</button>
+    <script>
+        function xuly(number) {
+          var  nhap = document.getElementById('nhap').value
+            nhap += number 
+            document.getElementById('nhap').value = nhap
+        }
+        function kq(){
+          var a = document.getElementById('nhap').value 
+          q = eval(a)
+          document.getElementById('nhap').value = q
+        }
+        function xoa(){
+
+                document.getElementById('nhap').value = null
+        }
+    </script> 
+</body>
+
+</html>

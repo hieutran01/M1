@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form>
+        weight <input type="text" name="" id="a"><br>
+        height <input type="text" name="" id="b">
+        <input type="button" value="sumbit" onclick="xu_ly()">
+    </form>
+    <script>
+        function xu_ly() {
+            var weight = document.getElementById("a").value
+            var height = document.getElementById("b").value
+            var bmi = weight / (height * height)
+            if (bmi < 18.5) {
+                alert("gầy")
+            } else if (bmi >= 18.5 && bmi < 25) {
+                alert("bình thường")
+            } else if (bmi > 25 && bmi < 30) {
+                alert("thừa cân")
+            } else {
+                alert("béo phì")
+            }
+
+
+        } -->
+
+    <!-- </script> -->
+    <script>
+        var weight = prompt("nhập chiều cao");
+        var height = prompt("nhập cân nặng");
+        var bmi = weight / (height * height)
+        if (bmi < 18.5) {
+            alert("gầy")
+        } else if (bmi > 18.5 && bmi < 25) {
+            alert("bình thường")
+        } else if (bmi > 25 && bmi < 30) {
+            alert("thừa cân")
+        } else {
+            alert("béo phì")
+        }
+    </script>
+</body>
+
+</html>

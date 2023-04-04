@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class DiDong {
+  constructor() {
+    this.trangThaiPin = 100;
+    this.tinNhanSoanThao = '';
+    this.hopThuDen = [];
+    this.tinNhanDaGui = [];
+    this.trangThaiBat = false;
+  }
+  
+  kiemTraTrangThai() {
+    return this.trangThaiBat;
+  }
+  
+  bat() {
+    this.trangThaiBat = true;
+    console.log('Điện thoại đã được bật');
+  }
+  
+  tat() {
+    this.trangThaiBat = false;
+    console.log('Điện thoại đã được tắt');
+  }
+  
+  sacPin() {
+    if (this.trangThaiBat) {
+      this.trangThaiPin = 100;
+      console.log('Điện thoại đã được sạc đầy');
+    } else {
+      console.log('Điện thoại phải được bật để sạc pin');
+    }
+  }
+  
+  soanTinNhan(noiDung) {
+    if (this.trangThaiBat) {
+      this.tinNhanSoanThao = noiDung;
+      console.log(`Đã soạn tin nhắn "${noiDung}"`);
+      this.trangThaiPin--;
+    } else {
+      console.log('Điện thoại phải được bật để soạn tin nhắn');
+    }
+  }
+  
+  nhanTinNhan(tinNhan) {
+    if (this.trangThaiBat) {
+      this.hopThuDen.push(tinNhan);
+      console.log(`Đã nhận tin nhắn từ ${tinNhan}`);
+      this.trangThaiPin--;
+    } else {
+      console.log('Điện thoại phải được bật để nhận tin nhắn');
+    }
+  }
+  
+  guiTinNhan(noiDung, dienThoaiNhan) {
+    if (this.trangThaiBat) {
+      dienThoaiNhan.nhanTinNhan(noiDung);
+      this.tinNhanDaGui.push(noiDung);
+      console.log(`Đã gửi tin nhắn "${noiDung}" đến ${dienThoaiNhan}`);
+      this.trangThaiPin--;
+    } else {
+      console.log('Điện thoại phải được bật để gửi tin nhắn');
+    }
+  }
+  
+  xemHopThuDen() {
+    if (this.trangThaiBat) {
+      console.log('Hộp thư đến:');
+      for (let i = 0; i < this.hopThuDen.length; i++) {
+        console.log(`${i + 1}. ${this.hopThuDen[i]}`);
+      }
+      this.trangThaiPin--;
+    } else {
+      console.log('Điện thoại phải được bật để xem hộp thư đến');
+    }
+  }
+  
+  xemTinNhanDaGui() {
+    if (this.trangThaiBat) {
+      console.log('Tin nhắn đã gửi:');
+    }
+}
+        }
+    </script>
+</body>
+</html>

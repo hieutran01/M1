@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let Circle = function(dai,rong){
+            this.dai = dai;
+            this.rong = rong;
+            this.getchuvi = function(){
+                return (this.dai + this.rong) * 2;
+            }
+            this.getArea = function(){
+                return this.dai * this.rong
+            }
+        };
+        let circle = new Circle(2,3);
+        
+      
+        console.log(circle.getArea());
+        console.log(circle.getchuvi());
+    </script>
+</body>
+</html>

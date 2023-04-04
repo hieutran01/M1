@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sach ca si noi tieng vpop</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+</style>
+
+<body>
+    <h1>Danh Sách Ca Sĩ Nỗi Tiếng V-POP</h1>
+    <table style=" border: 1px solid black; width: 700px; float: right">
+        <thead>
+            <tr>
+                <th style="font-size: 40px" colspan="10">Danh Sách Các Ca Sĩ </th>
+            </tr>
+            <tr>
+                <th>Số thứ tự</th>
+                <th>Họ tên</th>
+                <th>Ngày sinh</th>
+                <th>Giới tính</th>
+                <th>Nguyên quán</th>
+                <th>Ảnh</th>
+                <th>Tùy chọn</th>
+            </tr>
+
+        </thead>
+        <tbody id="list-student">
+        </tbody>
+    </table>
+    <table border="1" style="width: 500px; height: 300px" ;>
+        <tr id="id1">
+            <th colspan="2"> Thông Tin Của Ca Sĩ</th>
+        </tr>
+        <tr>
+            <th>Số thứ tự</th>
+            <td><input type="number" id="id"></td>
+        </tr>
+        <tr>
+            <th>Họ tên</th>
+            <td><input type="text" id="fullname"></td>
+        </tr>
+        <tr>
+            <th>Ngày sinh</th>
+            <td><input type="date" id="date"></td>
+        </tr>
+        <tr>
+            <th>Giới tính</th>
+            <td><input type="text" id="gender"></td>
+        </tr>
+        <tr>
+            <th>Nguyên quán</th>
+            <td><input type="text" id="grade"></td>
+        </tr>
+        <tr>
+            <th>Ảnh Ca Sĩ</th>
+            <td><input type="text" id="img"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                <button style="background-color: rgb(76, 189, 76)" id="add" onclick="addStudent()">Lưu</button>
+            </td>
+        </tr>
+        
+
+
+    </table>
+</body>
+<script>
+    let students = [];
+    let edit_id = -1;
+    class Student {
+        constructor(id, fullname, date, gender, grade, img) {
+            this.id = id;
+            this.fullname = fullname;
+            this.date = date;
+            this.gender = gender;
+            this.grade = grade;
+            this.img = img;
+        }
+    }
+    // 
+    function emptyInput() {
+        document.getElementById('id').value = '';
+        document.getElementById('fullname').value = '';
+        document.getElementById('date').value = '';
+        document.getElementById('gender').value = '';
+        document.getElementById('grade').value = '';
+        document.getElementById('img').value = '';
+    }
+    // 
+    function addStudent() {
+        let id = document.getElementById('id').value;
+        let fullname = document.getElementById('fullname').value;
+        let date = document.getElementById('date').value;
+        let gender = document.getElementById('gender').value;
+        let grade = document.getElementById('grade').value;
+        let img = document.getElementById('img').value;
+        let student = new Student(id, fullname, date, gender, grade, img);
+        if (edit_id == -1) {
+            students.push(student);
+        } else {
+            students[edit_id].id = id;
+            students[edit_id].fullname = fullname;
+            students[edit_id].date = date;
+            students[edit_id].gender = gender;
+            students[edit_id].grade = grade;
+            students[edit_id].img = img;
+        };
+        showList();
+        emptyInput();
+    }
+    function showList() {
+        let html = "";
+        for (let i = 0; i < students.length; i++) {
+            html += '<tr>';
+            html += '<td>' + students[i].id + '</td>';
+            html += '<td>' + students[i].fullname + '</td>';
+            html += '<td>' + students[i].date + '</td>';
+            html += '<td>' + students[i].gender + '</td>';
+            html += '<td>' + students[i].grade + '</td>';
+            html += '    <td><img src="' + students[i].img + '" alt="" border=3 height=150 width=150></img></th>';
+            html += '<td>';
+            html += '<a href="#" onclick="editStudent(' + i + ')" class="link-btn">Chỉnh sửa</a>' + '&nbsp' + "<br>";
+            html += '<a href="#" onclick="deleteStudent(' + i + ')" class="link-btn1">Xóa</a> ';
+            html += '</td>';
+            html += '</tr>';
+        }
+        document.getElementById('list-student').innerHTML = html;
+    }
+    function editStudent(id) {
+        edit_id = id;
+        let student = students[id];
+        document.getElementById('id').value = student.id;
+        document.getElementById('fullname').value = student.fullname;
+        document.getElementById('date').value = student.date;
+        document.getElementById('gender').value = student.gender;
+        document.getElementById('grade').value = student.grade;
+        document.getElementById('img').value = student.img;
+    }
+    // console.log(student);
+    function deleteStudent(id) {
+        students.splice(id, 1);
+        showList();
+
+    }
+
+</script>
+
+</html>

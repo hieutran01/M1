@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+     function Human (ts_ten,ts_tuoi) {
+            // khai báo thuộc tính
+            this.ten = ts_ten;
+            this.tuoi = ts_tuoi;
+
+            // khai báo phương thức
+            this.chayxe = function () {
+                // gọi thuộc tính bên trong đối tượng
+                return this.ten + " chayxe";
+                // gọi pt bên trong đối tượng
+                this.dibo();
+            }
+
+            this.dibo = function () {
+                return "dibo";
+            }
+        }
+
+        let hieu = new Human("cuong",20);
+        console.log(hieu);
+        
+        hieu.ten = "hieu"
+        hieu.tuoi = 18;
+       
+        console.log(hieu);
+        console.log(hieu.chayxe());
+        console.log(hieu.dibo());
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

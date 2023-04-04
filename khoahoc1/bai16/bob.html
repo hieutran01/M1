@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         function sumEvenNumbers() {
+//   let sum = 0;
+//   for (let i = 1; i <= 1000; i++) {
+//     if (i % 2 == 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+// console.log(sumEvenNumbers());
+
+
+
+//function iterArr(arr) {
+//   var sum = 0;
+//   for(let i = 0;i<arr.length;i++){
+//       sum += arr[i]
+//   }
+  
+//   return sum;
+
+// }
+// var a = [1,2,3]
+// console.log(iterArr(a));
+
+
+// function sum_odd_5000() {
+//     var sum = 0;
+//    for (var i = 1; i <= 5000; i = i + 2){
+//             sum = sum + i;
+// }
+// return sum; 
+
+// }
+// console.log(sum_odd_5000());
+
+
+// function findMax(arr) {
+//   var max = arr[0];
+//   for(let i = 1;i<arr.length;i++){
+//       if(arr[i] > max){
+//           max = arr[i]
+//       }
+//   }
+//   return max;
+// }
+// var b = [1,2,3,4]
+// console.log(findMax(b));
+
+
+
+// function average(arr) {
+  
+ 
+//   let sum = 0;
+    
+   
+//   for (let i = 0; i < arr.length; i++) {
+//       sum += arr[i];
+//     }
+//     return sum / arr.length 
+// }
+// let a = [1,2,3]
+// console.log(average(a));
+
+
+
+// function createOddArray() {
+  
+ 
+//   var arr = [];
+//      for (let i = 1; i <= 50; i++) {
+      
+     
+//   if (i % 2 !== 0){
+//     arr.push(i)
+//   }
+//      }
+//     return arr; 
+// }
+// console.log(createOddArray());
+
+
+// function greaterY(arr, Y) {
+//     count = 0 
+//     for(let i = 0;i<arr.length;i++){
+//         if(arr[i] > Y){
+//             count ++
+//         }
+//     }
+//     return count; 
+// }
+// let a = [1,2,3,4]
+// let b = 3
+// console.log(greaterY(a,b));
+
+
+
+// msg = 'codegym';
+// for(var x = 0; x < msg.length - 1; x++){
+
+//     if(msg.length == 3)
+//     {
+//         for (var i = 2; i < 7; i++)
+//         {
+//             console.log(i);
+//         }
+//      }
+//     else
+//     {
+//         for (var i = msg.length; i > (msg.length - 2); i--){
+//         {
+//             console.log(i);
+//         }
+//     }
+// }
+// }
+
+// var x = 2;
+// var y = [1,2,3,4,5];
+// var z = [6,7,8,9,10,11];
+
+// if(y[x] + z[x-1] == z[x+2])
+// {
+//     console.log('Codegym');
+// }
+// else
+// {
+//     console.log('Agilead');
+// }
+
+
+
+// function squareVal(arr) {
+
+//     for(let i = 0;i<arr.length;i++){
+//         arr[i] = arr[i] * arr[i]
+        
+// }
+//     return arr; 
+// }
+// let a = [1,2,3,4]
+// console.log(squareVal(a));
+
+
+// function noNeg(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < 0) {
+//       arr[i] = 0;
+//     }
+//   }
+  
+
+//     return arr; 
+// }
+// let a = [-1,-2,4,5]
+// console.log(noNeg(a));
+
+
+function maxMinAvg(arr) {
+    let arrnew = []
+   let max = arr[0]
+   let min = arr[0]
+   let tong = 0
+   let dtb = 0
+   for(let i = 0;i<arr.length;i++){
+       if(arr[i] > max){
+           max = arr[i]
+       }
+      if(arr[i]<min){
+          min = arr[i]
+      }
+      tong += arr[i]
+   }
+   dtb = tong/arr.length
+   arrnew.push(max,min,dtb)
+    return arrnew; 
+}
+let a = [10,20,30,40,50]
+console.log(maxMinAvg(a));
+
+
+// function swap(arr) {
+   
+//    let temp = arr[0]
+// arr[0] = arr[arr.length-1]
+// arr[arr.length-1] = temp
+// return arr
+// }
+// let a = [1,2,3,4]
+// console.log(swap(a));
+
+// function numToStr(arr) {
+//     for(let i = 0;i<arr.length;i++){
+//         if(arr[i]<0){
+//             arr[i] = 'dojo'
+//         }
+//     }
+//     return arr; 
+// }
+// let a = [-1,-2,-3,4,5]
+// console.log(numToStr(a));
+
+
+msg = 'codegym';
+for(var x = 4; x < msg.length + 1; x++)
+{
+    if(msg.length == 3)
+    {
+        for (var i = 2; i < 7; i++)
+        {
+            console.log(i);
+        }
+    }
+    else
+    {
+        for (var i = msg.length;  i > (msg.length - 2); i--)
+        {
+            console.log(i);
+        }
+    }
+}
+    </script>
+</body>
+</html>

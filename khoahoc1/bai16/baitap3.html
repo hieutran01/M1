@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+
+       class Dendien{
+        constructor(trangthai){
+            this.trangthai = trangthai;
+        }
+        getTrangthai(){
+            return this.trangthai;
+        }
+       }
+       class Nutcongtacdien{
+        constructor(den,trangthai){
+            this.den = den;
+            this.trangthai = trangthai 
+        }
+        getDen(){
+            return this.den;
+        }
+        setDen(den){
+            this.den = den;
+        }
+        ketnoivoiDen(Dendien){
+            return this.den = Dendien;
+        }
+        tat(){
+            this.den.trangthai = false;
+            return this.trangthai = false;
+        }
+        bat(){
+            this.den.trangthai = true;
+            return this.trangthai = true;
+        }
+
+       }
+       let dendien1 = new Dendien(false);
+       let nutcongtacdien1 = new Nutcongtacdien(dendien1,false)//ket noi giưa cong tac 1 va den 1
+console.log(nutcongtacdien1.bat());
+console.log(dendien1.getTrangthai());
+console.log(nutcongtacdien1.tat());
+console.log(dendien1.getTrangthai());
+ </script>
+ 
+</body>
+
+</html>

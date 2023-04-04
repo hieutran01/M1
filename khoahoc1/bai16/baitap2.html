@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          let Nhietdo = function(doC){
+            this.doC = doC 
+            this.doF = function(){
+                return 9/5 * this.doC + 32
+            }
+            this.doK = function(){
+                return this.doC + 273.15
+            }
+        };
+        let nd = new Nhietdo(25);
+        console.log(nd.doF());
+        console.log(nd.doK());
+    </script>
+</body>
+</html>

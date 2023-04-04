@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var DT = prompt("nhập doanh thu");
+        // DT = parseInt(DT)
+        // var HH = 0;
+        // if (DT <= 100) {
+        //     HH = (DT * 5) / 100
+        // } else if (DT > 100 && DT < 110) {
+        //     HH = (DT * 7) / 100
+        // } else {
+        //     HH = (DT * 10) / 100
+        // }
+        // alert(HH)
+    //     tong = 0
+    //     var chay = 1;
+    //     var sochan = 0;
+    //     while (sochan <= 20){
+    //         if (chay % 2 == 0){
+    //             sochan++;
+    //             // console.log(chay);
+    //             tong = tong + chay
+    //         }
+    //         chay++
+    //     }
+    //     console.log(tong);
+    // var a = 0
+    // var b = 1
+    // var c = 1 
+    // while (true){
+    //     if (c%5==0){
+    //         alert("số fibonacci đầu tiên chia hết cho 5 là " + c)
+    //         break;
+    //     }
+    //    a = b
+    //    b = c 
+    //    c = a+b 
+       
+    // } 
+   
+    // var tong = 0
+    // var b = 0
+    // var c = 1
+    // for(var i = 1;i <= 5;i++){
+    //     tong = tong + c
+    //     let next = b + c
+    //     b = c
+    //     c = next 
+    // }alert(tong)
+    
+        // Lặp từ 0 -> 99 : Lặp 100 lần
+        let num;
+        for (num = 1; num <= 100; num++) { 
+            if (num % 3 == 0 && num % 5 !== 0) {
+                document.write("Fizz" + "<br>");
+                continue;
+            } else if (num % 5 == 0 && num % 3 !== 0) {
+                document.write("Buzz" + "<br>");
+                continue;
+            } else if (num % 3 == 0 && num % 5 == 0) {
+                document.write("FizzBuzz" + "<br>");
+                continue;
+            }
+            document.write (num + "<br>");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //     function Student(id, name, address){
+        //         this.id = id;
+        //         this.name = name;
+        //         this.address = address;
+        //         this.getInfor = function (){
+        //             return "Id=" + this.id + "Name=" + this.name + "Address="+ this.address;
+        //         }
+        //     }
+        //     var student = new Student(1,"Nguuyen van A", "ha Noi");
+        //     console.log(student.getInfor);
+
+        // var student = {
+        //     id: 1,
+        //     name: "Nguyen Van A",
+        //     address: "Ha Noi",
+        //     getInfo: function(){
+        //         return "Id="+ this.id+ "Name="+ this.name+ "Address"+ this.address; 
+        //     }
+        // }
+        // console.log(student.name);
+        // console.log(student.getInfor());
+
+
+        // function Circle(radius, color){
+        //     this.radius = radius;
+        //     this.color = color;
+
+        //     this.getRadius = function(){
+        //         return this.radius;
+
+        //     };
+        //     this.getColor = function(){
+        //         return this.color;
+        //     };
+        //     this.Area = function(){
+        //         return this.radius * this.radius * Math.PI;
+        //     }
+        // }
+        // var circle = new Circle(5,'red');
+        // var area = circle.getArea();
+        // document.write(area);
+
+
+//         var myInfo = {
+//             name: "Nguyen Van A",
+//             age: 18,
+//             address: "Ha Noi",
+//             getName: function(){
+//                 return this.name;
+//             }
+//         };
+
+//         myInfo.email = "nguyenvana@gmail.com" //thêm
+//         // var myKey = "address";
+//         // delete myInfo.name; // xóa
+//         //function --> Phương thức
+//         //Others --> Thuộc tính
+
+// console.log(myInfo);
+//  console.log(myInfo.getName());
+var khuong = {
+    chieucao: "175cm",
+    toc: "dai",
+    hinhdang: "om",
+    ten: "khuong",
+    tuoi: 23,
+    chayxe: function(){
+        //gọi thuộc tính bên trong đối tượng
+        return (this.ten + "  chay xe vi vu");
+        // gọi phương thức bên trong đối tượng
+        this.dibo();
+    },
+    dibo: function(){
+        return "dibo"
+    },
+    dilam: function(){
+        return "dilam"
+    },
+    xemcanhac: function(){
+        return "xemcanhac"
+    },
+    // get: function(){
+    //     return this.ten "dilam" + " " + "dibo" + " " + "xemcanhac" + " " + "chayxe"
+    // }
+    
+}
+// gán giá trị đối tượng
+khuong.ten = "vankhuong";
+khuong.tuoi = 18
+//console.log(khuong.get());
+console.log(khuong); // truy cập thuộc tính
+console.log(khuong.chayxe()); // truy cập phương thức
+console.log(khuong.dibo());
+console.log(khuong.dilam())
+console.log(khuong.xemcanhac());
+    </script>
+</body>
+
+</html>

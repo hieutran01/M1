@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //bài1
+        var a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]];
+
+        for (var i in a) {
+            console.log("row " + i);
+            for (var j in a[i]) {
+                console.log(" " + a[i][j]);
+            }
+        }
+        //bài 2
+        // let a = ['c', 's', 'c', '2', '6', '1'];
+        // let first = 0;
+        // let last = a.length - 1;
+        // while(first < last) {
+        //     let b = a[first];
+        //     a[first] = a[last];
+        //     a[last] = b;
+        //     first++;
+        //     last--;
+        // }
+        // console.log(a);
+
+        //bài4
+        // let a = ['1', '2', '3', '4', '5', '6'];
+        // function count_a(a) {
+        //     (a.split([a]).length);
+        // }
+        // console.log(count_a);
+
+        //bai5
+        
+    // let stringUser1;
+    // let stringUser2;
+
+    // function initString() {
+    //     stringUser1 = prompt('Mời bạn nhập chuỗi 1: ');
+    //     stringUser2 = prompt('Mời bạn nhập chuỗi 2: ');
+    // }
+
+    // function compare2String() {
+    //     let i = 0;
+
+    //     if (stringUser1.length == stringUser2.length) {
+    //         while ((stringUser1[i] == stringUser2[i]) && (i < stringUser2.length))
+    //             i++;    
+    //         if (i == stringUser1.length)
+    //             alert('Hai chuỗi giống nhau');
+    //         else
+    //             alert('Hai chuỗi khác nhau');
+    //     }
+    //     else
+    //         alert('Hai chuỗi khác nhau.')
+    // }
+
+
+    // function main() {
+    //     initString();
+    //     compare2String();
+    // }
+
+    // main();
+
+    //bai6
+    let stringUser;
+
+
+    function initString() {
+        stringUser = prompt('nhap dai di cung duoc : ');
+    }
+
+    function findAndReplace() {
+        let i;
+        let j = 0;
+        let newString = '';
+
+        for (i = 0; i < stringUser.length; i++) {
+            if (stringUser[i] == '-') {
+                newString += stringUser.substr(j, i - j);
+                newString += '_';
+                j=i+1;
+            }
+        }
+        newString += stringUser.substr(j, stringUser.length - j);
+    alert(newString);
+        document.write('Số từ trong chuỗi là: ' + count);
+    }
+
+
+    function main() {
+        initString();
+        findAndReplace();
+    }
+
+    main();
+
+ 
+    </script>
+</body>
+
+</html>
